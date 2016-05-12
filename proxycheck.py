@@ -1,3 +1,4 @@
+#!/bin/python
 # -*- coding: utf-8 -*-
 """
 @options: -o  - save working proxies to alives.txt (appending)
@@ -33,7 +34,7 @@ def check_proxy(proxy):
     try:
         proxies = {"http": "http://" + str(proxy)}
         opener = urllib.FancyURLopener(proxies)
-        opener.open("http://www.google.com")
+        opener.open("https://www.google.com")
         
         save_alive_proxy(proxy)
         
